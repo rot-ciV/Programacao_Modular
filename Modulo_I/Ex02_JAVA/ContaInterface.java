@@ -21,35 +21,30 @@ class ContaInterface {
 
             switch (acao){
 
-                case 1: {
+                case 1 -> System.out.println("R$ "+conta_cliente.conferir());
 
-                    System.out.println("R$"+conta_cliente.conferir());
-                }
-
-                case 2: {
+                case 2 -> {
 
                     System.out.println("Digite a quantidade de dinheiro que gostaria de depositar: ");
                     double deposito = teclado.nextDouble();
                     conta_cliente.depositar(deposito);
-                    
                 }
+                    
+                case 3 -> {
 
-                case 3: {
                     System.out.println("Digite a quantidade de dinheiro que gostaria de sacar:");
-                    
+                    double saque = teclado.nextDouble();
+                    conta_cliente.sacar(saque);
                 }
 
-                case 4: {
+                case 4 -> {
 
-                    
+                    return; 
                 }
 
-                default:{
-
-                    System.out.println("Opção inválida");
-                }
+                default -> System.out.println("Opção inválida");
+                
             }
         }
-            
     }
 }
