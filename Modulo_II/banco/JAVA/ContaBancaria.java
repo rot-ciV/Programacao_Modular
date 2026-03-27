@@ -4,7 +4,13 @@ abstract class ContaBancaria{
     protected int numConta;
     protected float saldo;
 
-    public ContaBancaria() {}
+    public ContaBancaria() {
+
+        super();
+        cliente = "";
+        numConta = 0;
+        saldo = 0.0f;
+    }
 
     public ContaBancaria(String cliente, int numConta, float saldo){
 
@@ -26,5 +32,17 @@ abstract class ContaBancaria{
         saldo += deposito;
     }
 
+    public void setCliente(String cliente) { this.cliente = cliente; }
+    public void setNumConta(int numConta) { this.numConta = numConta; }
+    public void setSaldo(float saldo) { this.saldo = saldo; }
+
+    public String getCliente() { return cliente; }
+    public int getNumConta() { return numConta; }
     public abstract float getSaldo();
+
+    @Override
+    public String toString(){
+
+        return "Cliente: " + cliente + " | Número da Conta: " + numConta + " | Saldo: R$ " + saldo;
+    }
 }

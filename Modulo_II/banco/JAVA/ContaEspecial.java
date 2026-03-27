@@ -2,7 +2,14 @@ class ContaEspecial extends ContaBancaria {
 
     private float limite;
 
-    public ContaEspecial(){}
+    public ContaEspecial(){
+
+        super();
+        limite = 0.0f;
+    }
+
+    public void setLimite(float limite) { this.limite = limite; }
+    public float getLimite() { return limite; }
     
     public ContaEspecial(String cliente, int numConta, float saldo, float limite){
 
@@ -23,5 +30,11 @@ class ContaEspecial extends ContaBancaria {
 
         saldo -= saque;
         return true;
+    }
+
+    @Override
+    public String toString(){
+
+        return super.toString() + " | Limite: " + limite;
     }
 }
