@@ -48,6 +48,7 @@ public class NumeroComplexo{
         return resultado;
     }
 
+    @Override
     public String toString(){
 
         if(this.b >= 0){
