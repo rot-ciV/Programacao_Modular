@@ -2,10 +2,7 @@ from conta import Conta
 
 class ContaInterface:
 
-    def __init__(self):
-        pass
-
-    def Menu(self, conta_cliente):
+    def menu(self, conta_cliente):
 
         while True:
 
